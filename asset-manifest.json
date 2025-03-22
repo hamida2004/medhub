@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/medhub/static/css/main.45e3dff5.css",
+    "main.js": "/medhub/static/js/main.8f521626.js",
+    "index.html": "/medhub/index.html",
+    "main.45e3dff5.css.map": "/medhub/static/css/main.45e3dff5.css.map",
+    "main.8f521626.js.map": "/medhub/static/js/main.8f521626.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45e3dff5.css",
+    "static/js/main.8f521626.js"
+  ]
+}
