@@ -3,19 +3,32 @@ import styled from 'styled-components'
 import { colors } from '../assets/style'
 import logo from '../assets/images/logo.png'
 function Body() {
-
   const Div = styled.div`
   width:100%;
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding:80px;
-  gap:20px
+  gap:20px;
+  flex-wrap:wrap;
+  @media (max-width: 1024px) {
+    padding: 40px; 
+    justify-content:center;
+    /* للأجهزة اللوحية (تابلت) */
+  }
 
+  @media (max-width: 768px) {
+    padding: 20px;
+    justify-content:center;
+    
+    /* للهواتف المحمولة */
+  }
+  
   `
 
   const Half = styled.div`
   width:40%;
+  min-width:300px;
   display:flex;
   flex-direction:column;
   gap:20px;
@@ -64,12 +77,17 @@ function Body() {
   width:200px;
   padding:20px;
   display:flex;
+  min-width:200px;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   gap:20px;
   background-color:${colors.white};
-  box-shadow: 2px 2px 4px ${colors.white}
+  box-shadow: 2px 2px 4px ${colors.white};
+  max-height:300px;
+  overflow:hidden;
+  margin:0px 20px;
+
   `
 
   const ListContainer = styled.ul`
@@ -77,7 +95,7 @@ function Body() {
   width:100%;
   padding:0px 20px;
   display:flex;
-  align-items:start;
+  align-items:center;
   justify-content:center;
   flex-direction:column;
   gap:12px;
@@ -124,7 +142,7 @@ function Body() {
         <Div
           style={{
             height: '80%',
-            padding: '0px 80px'
+            justifyContent: 'center'
           }}
         >
           <Card>

@@ -5,7 +5,13 @@ import { BsList } from "react-icons/bs";
 import { IoClose } from "react-icons/io5";
 import { colors } from '../assets/style'
 
-const NavBar = styled.div`
+
+function Nav() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
+  const NavBar = styled.div`
   width: 100%;
   height: 60px;
   display: flex;
@@ -23,12 +29,12 @@ const NavBar = styled.div`
   }
 `;
 
-const Image = styled.img`
+  const Image = styled.img`
   height: 40px;
   z-index: 3;
 `;
 
-const Ul = styled.ul`
+  const Ul = styled.ul`
   list-style: none;
   display: flex;
   align-items: center;
@@ -40,7 +46,7 @@ const Ul = styled.ul`
     align-items: center;
     justify-content: center;
     gap: 10px;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 60px;
     right: 0;
@@ -50,9 +56,9 @@ const Ul = styled.ul`
   }
 `;
 
-const A = styled.a`
+  const A = styled.a`
   text-decoration: none;
-  color:${colors.black};
+  color:${isMenuOpen ? colors.secondary : colors.black};
   padding: 4px 8px;
   &:hover {
     color: ${colors.primary};
@@ -60,7 +66,7 @@ const A = styled.a`
   }
 `;
 
-const ScrollButton = styled.button`
+  const ScrollButton = styled.button`
   background: none;
   border: none;
   color:${colors.primary};
@@ -74,10 +80,8 @@ const ScrollButton = styled.button`
   }
 `;
 
-function Nav() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+ 
   const scrollDown = () => {
     setTimeout(() => {
       window.scrollTo({
@@ -123,19 +127,17 @@ function Nav() {
         />
       )}
       <Ul isMenuOpen={isMenuOpen}>
-        <A href="/" onClick={() => setIsMenuOpen(false)}>
-          Medcine
+        <A href="/detailed/medicine" onClick={() => setIsMenuOpen(false)}>
+          Medicine
         </A>
 
-        <A href="/" onClick={() => setIsMenuOpen(false)}>
+        <A href="/detailed/pharma" onClick={() => setIsMenuOpen(false)}>
           Parma
         </A>
 
-        <A href="/" onClick={() => setIsMenuOpen(false)}>
+        <A href="/detailed/dental" onClick={() => setIsMenuOpen(false)}>
           Dental
         </A>
-
-
       </Ul>
       <ScrollButton onClick={() => {
         scrollDown();

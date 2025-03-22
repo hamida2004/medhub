@@ -1,9 +1,8 @@
 import React from 'react'
-import Header from './Header'
-import Body from './Body'
-import Other from './Other'
-import Footer from './Footer'
-import Nav from './Nav'
+import Body from '../components/Body'
+import Other from '../components/Other'
+import Footer from '../components/Footer'
+import Nav from '../components/Nav'
 
 function Main() {
     return (
