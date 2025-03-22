@@ -2,7 +2,7 @@
 import './App.css';
 import Detailed from './pages/Detailed';
 import Main from './pages/Main';
-import { Route, BrowserRouter as Router, Routes} from 'react-router-dom'
+import { Route, HashRouter as Router, Routes} from 'react-router-dom'
 import NotFound from './pages/NotFound';
 
 
