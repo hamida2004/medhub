@@ -1,20 +1,18 @@
-
 import './App.css';
 import Detailed from './pages/Detailed';
 import Main from './pages/Main';
-import { Route, HashRouter as Router, Routes} from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import NotFound from './pages/NotFound';
-
 
 function App() {
   return (
-    <Router>
-  <Routes>
-    <Route path="/" element={<Main />} />
-    <Route path="/detailed/:name" element={<Detailed />} />
-    <Route path="*" element={<NotFound/>} />
-  </Routes>
-</Router>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/detailed/:name" element={<Detailed />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </HashRouter>
   );
 }
 

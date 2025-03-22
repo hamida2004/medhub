@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../assets/style'
 import logo from '../assets/images/logo.png'
+import { Link, useNavigate } from 'react-router-dom'
 function Body() {
+  const navigate = useNavigate()
   const Div = styled.div`
   width:100%;
   display:flex;
@@ -62,11 +64,11 @@ function Body() {
 
   `
 
-  const A = styled.a`
+  const A = styled(Link)`
   text-decoration:none;
   text-align:left;
   cursor:pointer;
-
+  color:${colors.black};
   &:hover {
       transform: scale(1.1, 1);
     }
@@ -153,15 +155,16 @@ function Body() {
                 fontSize: "1.2rem",
                 color: colors.primary
               }}
+              to={'/detailed/pharma'}
             >Pharma</A>
             <ListContainer>
-              <ListItem><A>1st year</A></ListItem>
-              <ListItem><A>2nd year</A></ListItem>
-              <ListItem><A>3rd year</A></ListItem>
-              <ListItem><A>4th year</A></ListItem>
-              <ListItem><A>5th year</A></ListItem>
-              <ListItem><A>6th year</A></ListItem>
-              <ListItem><A
+              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>1st year</A></ListItem>
+              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>2nd year</A></ListItem>
+              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>3rd year</A></ListItem>
+              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>4th year</A></ListItem>
+              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>5th year</A></ListItem>
+              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>6th year</A></ListItem>
+              <ListItem><A to='/detailed/pharma'
                 style={{ fontWeight: 500 }}
               >Other</A></ListItem>
             </ListContainer>
@@ -174,16 +177,17 @@ function Body() {
                 fontSize: "1.2rem",
                 color: colors.primary
               }}
+              to={'/detailed/medicine'}
             >Medcine</A>
             <ListContainer>
-              <ListItem><A>1st year</A></ListItem>
-              <ListItem><A>2nd year</A></ListItem>
-              <ListItem><A>3rd year</A></ListItem>
-              <ListItem><A>4th year</A></ListItem>
-              <ListItem><A>5th year</A></ListItem>
-              <ListItem><A>6th year</A></ListItem>
-              <ListItem><A>7th year</A></ListItem>
-              <ListItem><A
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>1st year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>2nd year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>3rd year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>4th year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>5th year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>6th year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>7th year</A></ListItem>
+              <ListItem><A to={'/detailed/medicine'}
                 style={{ fontWeight: 500 }}
               >Other</A></ListItem>
             </ListContainer>
@@ -196,15 +200,17 @@ function Body() {
                 fontSize: "1.2rem",
                 color: colors.primary
               }}
+              to={'/detailed/dental'}
             >Dental</A>
             <ListContainer>
-              <ListItem><A>1st year</A></ListItem>
-              <ListItem><A>2nd year</A></ListItem>
-              <ListItem><A>3rd year</A></ListItem>
-              <ListItem><A>4th year</A></ListItem>
-              <ListItem><A>5th year</A></ListItem>
-              <ListItem><A>6th year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>1st year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>2nd year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>3rd year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>4th year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>5th year</A></ListItem>
+              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>6th year</A></ListItem>
               <ListItem><A
+                to='/detailed/dental'
                 style={{ fontWeight: 500 }}
               >Other</A></ListItem>
             </ListContainer>
