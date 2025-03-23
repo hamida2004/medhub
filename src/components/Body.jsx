@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../assets/style'
 import logo from '../assets/images/logo.png'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import { specialities } from '../assets/links'
 function Body() {
-  const navigate = useNavigate()
   const Div = styled.div`
   width:100%;
   display:flex;
@@ -158,12 +158,12 @@ function Body() {
               to={'/detailed/pharma'}
             >Pharma</A>
             <ListContainer>
-              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>1st year</A></ListItem>
-              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>2nd year</A></ListItem>
-              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>3rd year</A></ListItem>
-              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>4th year</A></ListItem>
-              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>5th year</A></ListItem>
-              <ListItem><A to='https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'>6th year</A></ListItem>
+              {specialities.find(speciality => speciality.name === 'pharma').years.map(year => {
+                let link = year.drives[0].driveLink
+                return (
+                  <ListItem key={year.id}><A to={link}>{year.year}</A></ListItem>
+                )
+              })}
               <ListItem><A to='/detailed/pharma'
                 style={{ fontWeight: 500 }}
               >Other</A></ListItem>
@@ -180,13 +180,12 @@ function Body() {
               to={'/detailed/medicine'}
             >Medcine</A>
             <ListContainer>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>1st year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>2nd year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>3rd year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>4th year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>5th year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>6th year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>7th year</A></ListItem>
+              {specialities.find(speciality => speciality.name === 'medicine').years.map(year => {
+                let link = year.drives[0].driveLink
+                return (
+                  <ListItem key={year.id}><A to={link}>{year.year}</A></ListItem>
+                )
+              })}
               <ListItem><A to={'/detailed/medicine'}
                 style={{ fontWeight: 500 }}
               >Other</A></ListItem>
@@ -203,12 +202,12 @@ function Body() {
               to={'/detailed/dental'}
             >Dental</A>
             <ListContainer>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>1st year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>2nd year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>3rd year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>4th year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>5th year</A></ListItem>
-              <ListItem><A to={'https://drive.google.com/drive/folders/1-0G8KYEe_UD7i2OKq6jIQVpSsQmELaWu'}>6th year</A></ListItem>
+              {specialities.find(speciality => speciality.name === 'dental').years.map(year => {
+                let link = year.drives[0].driveLink
+                return (
+                  <ListItem key={year.id}><A to={link}>{year.year}</A></ListItem>
+                )
+              })}
               <ListItem><A
                 to='/detailed/dental'
                 style={{ fontWeight: 500 }}

@@ -48,6 +48,16 @@ const DriveLink = styled.a`
     text-decoration: underline;
   }
 `;
+const P = styled.p`
+  color: ${colors.primary}; // ✅ استخدام اللون مباشرةً
+  text-align: center;`;
+
+const Div = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+gap:20px;
+`;
 
 function Detailed() {
   const { name } = useParams();
@@ -70,9 +80,12 @@ function Detailed() {
           <YearHeader onClick={() => toggleYear(year.id)}>{year.year}</YearHeader>
           <YearContent isOpen={openYears[year.id]}>
             {year.drives.map((drive) => (
+              <Div>
+              <P>{drive.year}</P>
               <DriveLink key={drive.id} href={drive.driveLink} target="_blank">
                 {drive.faculty} - Google Drive Link
               </DriveLink>
+              </Div>
             ))}
           </YearContent>
         </YearContainer>
