@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/medhub/static/css/main.45e3dff5.css",
-    "main.js": "/medhub/static/js/main.29169684.js",
+    "main.js": "/medhub/static/js/main.3c974bc4.js",
     "index.html": "/medhub/index.html",
     "main.45e3dff5.css.map": "/medhub/static/css/main.45e3dff5.css.map",
-    "main.29169684.js.map": "/medhub/static/js/main.29169684.js.map"
+    "main.3c974bc4.js.map": "/medhub/static/js/main.3c974bc4.js.map"
   },
   "entrypoints": [
     "static/css/main.45e3dff5.css",
-    "static/js/main.29169684.js"
+    "static/js/main.3c974bc4.js"
   ]
 }
