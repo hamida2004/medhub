@@ -158,12 +158,14 @@ function Body() {
               to={'/detailed/pharma'}
             >Pharma</A>
             <ListContainer>
-              {specialities.find(speciality => speciality.name === 'pharma').years.map(year => {
-                let link = year.drives[0].driveLink
-                return (
-                  <ListItem key={year.id}><A to={link}>{year.year}</A></ListItem>
-                )
-              })}
+              {specialities.find(speciality => speciality.name === 'pharma').years.length > 0
+                &&
+                specialities.find(speciality => speciality.name === 'pharma').years.map(year => {
+                  let link = year.drives > 0 ? year.drives[0].driveLink : { year: 'https://hamida2004.github.io/medhub/', id: 0 }
+                  return (
+                    <ListItem key={year.id}><A to={link}>{year.year}</A></ListItem>
+                  )
+                })}
               <ListItem><A to='/detailed/pharma'
                 style={{ fontWeight: 500 }}
               >Other</A></ListItem>
@@ -180,12 +182,13 @@ function Body() {
               to={'/detailed/medicine'}
             >Medcine</A>
             <ListContainer>
-              {specialities.find(speciality => speciality.name === 'medicine').years.map(year => {
-                let link = year.drives[0].driveLink
-                return (
-                  <ListItem key={year.id}><A to={link}>{year.year}</A></ListItem>
-                )
-              })}
+              {specialities.find(speciality => speciality.name === 'medicine').years.length > 0 &&
+                specialities.find(speciality => speciality.name === 'medicine').years.map(year => {
+                  let link = year.drives.length > 0 ? year.drives[0].driveLink : { year: 'https://hamida2004.github.io/medhub/', id: 0 }
+                  return (
+                    <ListItem key={year.id}><A to={link}>{year.year}</A></ListItem>
+                  )
+                })}
               <ListItem><A to={'/detailed/medicine'}
                 style={{ fontWeight: 500 }}
               >Other</A></ListItem>
@@ -202,12 +205,13 @@ function Body() {
               to={'/detailed/dental'}
             >Dental</A>
             <ListContainer>
-              {specialities.find(speciality => speciality.name === 'dental').years.map(year => {
-                let link = year.drives[0].driveLink
-                return (
-                  <ListItem key={year.id}><A to={link}>{year.year}</A></ListItem>
-                )
-              })}
+              {specialities.find(speciality => speciality.name === 'dental').years.length > 0 &&
+                specialities.find(speciality => speciality.name === 'dental').years.map(year => {
+                  let link = year.drives.length > 0 ? year.drives[0].driveLink : { year: 'https://hamida2004.github.io/medhub/', id: 0 }
+                  return (
+                    <ListItem key={year.id}><A to={link}>{year.year}</A></ListItem>
+                  )
+                })}
               <ListItem><A
                 to='/detailed/dental'
                 style={{ fontWeight: 500 }}
